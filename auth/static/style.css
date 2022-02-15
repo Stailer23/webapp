@@ -1,0 +1,80 @@
+h2 {
+position: absolute;
+top: 60px;
+left: 860px;
+}
+
+ul.menu {
+list-style: none;
+overflow: hidden;
+font-size: 25px;
+background-color: #008080;
+padding: 0;
+margin: 0;
+}
+
+ul.menu li a{
+float: left;
+margin: 20px 50px 10px 220px;
+color: #FF7F50;
+text-decoration: none;
+}
+
+.content {
+	width: 800px;
+	margin: 0 auto;
+	padding: 20px 20px 0 20px;
+	min-height: 100vh;
+	background-color: #fff;
+}
+
+.all {
+background-color: gray;
+min-height: 100vh;
+}
+
+.formlogin {
+margin: 50px 700px 0 700px;
+border: 3px;
+border-style: solid;
+border-radius: 25px;
+padding: 30px;
+position: relative;
+background: #fff;
+}
+
+.formlogin label {
+display: inline-block;
+min-width: 100px;
+}
+
+.formlogin .invalid {
+position: absolute;
+display: inline-block;
+
+}
+
+.formlogin .invalid-feedback {
+position: absolute;
+top: 3px;
+left: 30px;
+color: #8B0000;
+background: #FFA07A;
+padding: 2px;
+}
+
+.msg.success {
+color: #008000;
+background: #98FB98;
+position: absolute;
+top: 3px;
+left: 30px
+}
+
+.msg.error {
+color: #8B0000;
+background: #FFA07A;
+position: absolute;
+top: 3px;
+left: 30px
+}

@@ -1,0 +1,30 @@
+{% extends 'auth/base.html' %}
+{% block content %}
+
+<h2>Авторизация</h2>
+<form action="/login" method="post" class="formlogin">
+    {{ form.hidden_tag() }}
+    {% for cat, msg in get_flashed_messages(True) %}
+    <div class="msg {{cat}}">{{msg}}</div>
+    {% endfor %}
+    {% for field in form if field.name not in ['csrf_token', 'remember', 'submit'] %}
+    <p>{{ field.label() }}
+    {% if field.errors %}
+        {{ field(class='invalid') }}
+    <span class="invalid-feedback">
+        {% for e in field.errors %}
+        {{ e }}
+        {% endfor %}
+    </span>
+    {% else %}
+    {{ field() }}
+    {% endif %}
+    {% endfor %}
+        <p>{{ form.submit() }}</p>
+        <p>{{ form.remember.label() }} {{ form.remember() }}</p>
+        <hr>
+    <p><a href="{{ url_for('auth.registary') }}">Регистрация</a>
+
+
+</form>
+{% endblock %}
